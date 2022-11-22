@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <script>
+            function register()
+            {
+                let name_txt  = document.getElementById("name").value//get val from input box
+                let password_txt=document.getElementById("password").value
+                let email_txt=document.getElementById("email").value
+                let role=document.getElementById("role").value
+                 if(name_txt == "" || name_txt == undefined){
+                     document.getElementById("heading").innerHTML = "Error:: Please Enter name";
+                }
+                else if(password_txt == "" || password_txt == undefined){
+                     document.getElementById("heading").innerHTML = "Error:: Please Enter password";
+                }
+                else if(email_txt == "" || email_txt == undefined){
+                    document.getElementById("heading").innerHTML = "Error::Please Enter email";       
+                }
+                else if(role == "" || role == undefined){
+                    document.getElementById("heading").innerHTML = "Error::Please Enter role";       
+                }
+                else
+                {
+                    let req_data = {
+                   "name": name_txt,
+                    "password": password_txt,
+                    "email":email_txt,
+                    "role":role
+                  }
+            	    fetch("http://localhost:8080/Blogging_url/Register",{
+                    method:"POST",
+                    body:JSON.stringify(req_data),
+                    headers:{
+                        'Content-Type':'application/json',
+                    }
+                  })
+                  .then(ser_res=>ser_res.json())//parse the server response
+                  .then(json_response=>{//to get the result from the previous method
+                  document.getElementById("heading").innerHTML = JSON.stringify(json_response);//json to string object
+                  })
+                  document.getElementById("heading").innerHTML = "Successfully Registered";
+                } 
+            }  
+
+        </script>
+    </head>
+    <body>
+      <h1 id="heading">Register </h1>
+      <div>
+        <input type="text" id="name"  placeholder="Enter Name ">
+      </div>
+      <div>
+        <input type="password" id="password"  placeholder="Enter password ">
+      </div>
+      <div>
+        <input type="text" id="email"  placeholder="Enter email ">
+      </div>
+      <div>
+        <input type="text" id="role"  placeholder="Enter role ">
+      </div>
+        <button onclick="register()">Click Me</button>        
+    </body>
+</html> 

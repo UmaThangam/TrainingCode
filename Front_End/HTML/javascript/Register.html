@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script>
+            function register()
+            {
+                let name  = document.getElementById("name").value//get val from input box
+                let password=document.getElementById("password").value
+                let mobile_no=document.getElementById("mobile_no").value
+                let re_password=document.getElementById("re_password").value
+                //document.getElementById("sample_heading").innerHTML = "update in javascipt"
+                 if(name == "" || name == undefined){
+                     document.getElementById("heading").innerHTML = "Error:: Please Enter name";
+                }
+                else if(password == "" || password == undefined){
+                     document.getElementById("heading").innerHTML = "Error:: Please Enter password";
+                }
+                else if(re_password == "" || re_password == undefined){
+                     document.getElementById("heading").innerHTML = "Error:: Please Enter re_password";        
+                }
+                else if(!password == re_password) {
+                    document.getElementById("heading").innerHTML = "Error:: re_password does't match with pasword";
+                }
+                else if(mobile_no == "" || mobile_no == undefined){
+                    document.getElementById("heading").innerHTML = "Error::Please Enter name";       
+                }
+                else{
+                    document.getElementById("heading").innerHTML = "Successfully Registered";
+                }    
+            }      
+        </script>
+    </head>
+    <body>
+      <h1 id="heading">Register <Form:get></Form:get></h1>
+      <div>
+        <input type="text" id="name"  placeholder="Enter Name ">
+      </div>
+      <div>
+        <input type="text" id="password"  placeholder="Enter password ">
+      </div>
+      <div>
+        <input type="text" id="re_password"  placeholder="Enter re_password ">
+      </div>
+      <div>
+        <input type="text" id="mobile_no"  placeholder="Enter mobile_no ">
+      </div>
+        <button onclick="register()">Click Me</button>        
+    </body>
+</html> 

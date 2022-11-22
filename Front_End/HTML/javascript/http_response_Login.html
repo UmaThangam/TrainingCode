@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <script>
+            function register()
+            {
+                let password_txt=document.getElementById("password").value
+                let email_txt=document.getElementById("email").value
+                 if(password_txt == "" || password_txt == undefined){
+                     document.getElementById("heading").innerHTML = "Error:: Please Enter password";
+                }
+                else if(email_txt == "" || email_txt == undefined){
+                    document.getElementById("heading").innerHTML = "Error::Please Enter email";       
+                }
+                else
+                {
+                    let req_data = {
+                    "password": password_txt,
+                    "email":email_txt,
+                  }
+                  let token=sessionStorage.getItem("token");
+            	    fetch("http://localhost:8080/Blogging_url/Login",{
+                    method:"POST",
+                    body:JSON.stringify(req_data),
+                    headers:{
+                        'Content-Type':'application/json',
+                        "token":token,
+                    }
+                  })
+                  .then(ser_res=>ser_res.json())//parse the server response
+                  .then(json_response=>{//to get the result from the previous method
+                  sessionStorage.setItem("token",json_response['token']); // token will be strord in a session storage
+                  document.getElementById("heading").innerHTML = JSON.stringify(json_response);//json to string object
+                  })
+                  document.getElementById("heading").innerHTML = "Successfully Logined";
+                } 
+            }  
+        //<Form:get></Form:get>
+        </script>
+    </head>
+    <body>
+      <h1 id="heading">Login </h1>
+      <div>
+        <input type="text" id="email"  placeholder="Enter email ">
+      </div>
+      <div>
+        <input type="password" id="password"  placeholder="Enter password ">
+      </div>      
+        <button onclick="register()">Click Me</button>        
+    </body>
+</html> 

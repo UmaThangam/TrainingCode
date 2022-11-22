@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+        <style>
+            select{
+                background-color: rgb(212, 127, 0);
+                color: #ffff;
+                font-size: 25px;
+            }
+            div{
+                background-color: rgba(255, 0, 106, 0.568);
+            }
+            input{
+                background-color: #cdfa00;
+                color: #000;
+                font-size: 20px;
+                border-radius: 10px;
+                border: 5px solid;
+            }
+            .gender{
+                background-color: blue;
+                width: 25%;
+                color: #fff;
+            }
+            .red-color{
+                color: #000;
+                background-color: rgb(192, 35, 95);
+                ;/*text-align: center;*/
+                display: block;
+            }
+            .title{
+                text-align: center;
+                font-size: 50px;
+                color: #f9f6f6;
+                background-color: #000;
+                height:150px ;
+                width: 25%;
+                width: 50%;
+                border: 5px solid blue;
+                border-radius: 10px;
+                text-decoration: underline;
+                /* opacity: 0.5; */
+                /* below is for all 4 sides */
+                /* margin:10px; */
+                margin-top: 10px;
+                padding-top: 20px;
+            }
+            #date_title{
+                font-size: 25px;
+                color: #97d816;
+                background-color: #000;
+            }
+            .paragraph_content{
+                color: #000;
+                height: 100px;
+                /* overflow: hidden; */
+                overflow: auto;
+            }
+            .link_google{
+                color: #2e2e2c;
+                font-size: 1.5rem;
+                text-decoration: underline;
+            }.clock{
+                position: fixed;
+                top:50px;
+                right: 50px;;
+                background-color: rgb(68, 0, 255);
+                padding: 10px;
+                color: rgb(22, 21, 21);
+                border-radius: 10px;
+            }
+            .round-shape{
+                /* to creat round */
+                text-align: center;
+                width: 50px;
+                height: 50px;
+                border-radius: 25px;/*50/2 */
+                background-color:rgba(255, 123, 0, 0.986);
+            }
+            body {
+                background-image: url('file:///C:/Users/10592/Uploadfile/cat.jpg');
+                background-repeat: no-repeat;
+            }
+        </style>
+    </head>
+   <body>
+    <div class="title"><h3>Login Page</h3></div></title>
+    <form class="red-color">
+        <span>User Name :</span>
+        <input type ="text"><br><br>
+        <span>Password :</span>
+        <input type ="password"><br><br>
+    </form>
+    <span>Gender :</span>
+    <div class="gender">
+        <input name="gender" type="radio">Male
+        <input name="gender" type="radio">Fe-Male<br><br>
+    </div>    
+    <span>City :</span>
+    <input name="city" type="checkbox">Chennai
+         <input name="city"type="checkbox">Trichy
+         <input name="city" type="checkbox">madurai <br><br>
+    <input type="button" value="Click me" disabled> <br><br>
+        <span id="date_title">Select DOB</span>
+        <input type="date"><br><br>
+    <select>
+        <option>Select value</option>
+             <option selected>one</option>
+             <option>Two</option>
+             <option>Three</option>
+             <option>Four</option>
+             <option>Five</option>     
+     </select><br><br>
+    <a class="link_google" target="__parent" href="http://google.com">Click to go to google</a><br><br>
+    <!-- <img src="file:///C:/Users/10592/Uploadfile/cat.jpg" height="500"width="500"> -->
+    <span>Course List :</span>
+    <ul>
+        <li>test</li>
+             <li>Java</li>
+             <li>Pythan</li>
+             <li>Php</li>       
+        </ul>
+        <ol>
+            <li>Html</li>
+            <li>Css</li>
+            <li>Js</li>
+       </ol>
+       <div class="clock">Time is:16:00 PM</div>
+       <div class="paragraph_content">
+        Taking responsibility - practicing 100 percent responsibility every day - is about seeing ourselves not as right or wrong, but as an agent, chooser, problem solver,
+         and learner in the complex interrelationships of our lives so that we can better integrate with the people and world around us. When we do this,
+         we enjoy a better and more productive way to live and lead." Christopher Avery, The Responsibility Process.Simplicity requires a two-step process. First,
+         we must invest time and energy to discover what stirs us as human beings, what makes our hearts sing, and what brings us joy. 
+         Then, <mark> must proceed to create the life that reflects the unique people we truly are.</mark> This is the heart and soul of simplicity.
+          Linda Breen Pierce, Choosing Simplicity.Every day, think as you wake up, today I am fortunate to be alive, I have a precious human life, 
+          I am not going to waste it. I am going to use all my energies to develop myself, to expand my heart out to others; 
+          to achieve enlightenment for the benefit of all beings. I am going to have kind thoughts towards others, I am not going to get angry or think badly about others. 
+          I am going to benefit others as much as I can. Dalai Lama
+       </div>
+       <div class="round-shape"> Smile😍 </div>
+   </body> 
+</html>
+
+ <!-- ctrl+/ -->
+
+
