@@ -1,0 +1,17 @@
+2022-03-22 09:17:27,307 INFO com.example.register.RegisterApplication [restartedMain] Starting RegisterApplication using Java 17.0.1 on CBGIN1333 with PID 38436 (C:\Users\10592\Downloads\register\register\target\classes started by 10592 in C:\Users\10592\Downloads\register\register)
+2022-03-22 09:17:27,323 DEBUG com.example.register.RegisterApplication [restartedMain] Running with Spring Boot v2.6.2, Spring v5.3.14
+2022-03-22 09:17:27,323 INFO com.example.register.RegisterApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-22 09:17:39,218 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
